@@ -1,0 +1,133 @@
+% !TEX root = my-thesis.tex
+
+% **************************************************
+% Extra packages
+% **************************************************
+\usepackage{multicol}
+%\usepackage{epstopdf}
+%\setlength{\belowcaptionskip}{-10pt}
+\usepackage{booktabs}
+
+% Para hacer una pagina horizontal. Uso: \begin{landscape} xxxx \end{lanscape}
+\usepackage{lscape} 
+% Para incluir paginas PDF. Uso:
+% \includepdf[pages={1}]{tuarchivo.pdf}
+\usepackage{pdfpages}
+% Para introducir url's con formato. Uso: \url{http://www.google.es}
+\usepackage{url}
+% Amplia muchas funciones graficas de latex
+\usepackage{graphicx}
+% Paquete que añade el hipervinculo en referencias dentro del documento, indice, etc
+% Se define sin bordes alrededor. Uso: \ref{tulabel}
+\usepackage{hyperref}
+%\usepackage[pdfborder={000}]{hyperref}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{afterpage}
+\usepackage{verbatim}
+% Paquete para condicionales avanzados
+\usepackage{xstring,xifthen}
+% Paquete para realizar cálculos en el código
+\usepackage{calc}
+% Para rotar tablas o figuras o su contenido
+\usepackage{rotating} 
+% Para incluir comentarios en el texto. El parámetro 'disable' oculta todas las notas.
+% USO: \todo{tutexto}
+\usepackage[textsize=tiny,spanish,shadow,textwidth=2cm]{todonotes}
+
+\usepackage{subcaption} % Para poder realizar subfiguras
+%\usepackage{caption} % Para aumentar las opciones de diseño
+% Nombres de figuras, tablas, etc, en negrita la numeración, todo con letra small
+\captionsetup{labelfont={bf,small},textfont=small}
+% Paquete para modificar los espacios arriba y abajo de una figura o tabla
+\usepackage{setspace}
+% Define el espacio tanto arriba como abajo de las figuras, tablas
+\setlength{\intextsep}{5mm}
+% Para ajustar tamaños de texto de toda una tabla o grafica
+% Uso: {\scalefont{0.8} \begin{...} \end{...} }
+\usepackage{scalefnt}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+
+\usepackage{svg}
+
+\usepackage{multirow}
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+\usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Estrategia Evolutiva para Diseñar Redes Neuronales Convolucionales}
+\newcommand{\thesisName}{Sergio Martínez Hamdoun}
+\newcommand{\thesisSubject}{Trabajo Fin de Máster}
+\newcommand{\thesisDate}{28 de Junio de 2021}
+\newcommand{\thesisVersion}{Documento Final}
+
+\newcommand{\thesisFirstReviewer}{Ángela María Ribeiro Seijas}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{Universidad Politécnica de Madrid}}
+\newcommand{\thesisFirstReviewerDepartment}{Centro de Automática y Robótica}
+
+\newcommand{\thesisSecondReviewer}{Jeremy Karouta}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{Universidad Politécnica de Madrid}}
+\newcommand{\thesisSecondReviewerDepartment}{Centro de Automática y Robótica}
+
+\newcommand{\thesisFirstSupervisor}{Jane Doe}
+\newcommand{\thesisSecondSupervisor}{John Smith}
+
+\newcommand{\thesisUniversity}{\protect{Universidad Politécnica de Madrid}}
+\newcommand{\thesisUniversityDepartment}{Department of Clean Thesis Style}
+\newcommand{\thesisUniversityInstitute}{Institute for Clean Thesis Dev}
+\newcommand{\thesisUniversityGroup}{Clean Thesis Group (CTG)}
+\newcommand{\thesisUniversityCity}{Madrid}
+\newcommand{\thesisUniversityStreetAddress}{Street address}
+\newcommand{\thesisUniversityPostalCode}{Postal Code}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[spanish]{babel} % babel system, adjust the language of the content
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=endash,%
+    sansserif=false,%
+    hangfigurecaption=true,%
+    hangsection=true,%
+    hangsubsection=true,%
+    colorize=full,%
+    colortheme=bluegreen,% bluemagenta
+    bibsys=bibtex,%
+    bibfile=bib-refs,%
+    bibstyle=numeric ,%
+    wrapfooter=false,%
+}{cleanthesis}
+\usepackage{cleanthesis}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={\thesisTitle},    %   - title (PDF meta)
+    pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}
+
+

@@ -1,0 +1,130 @@
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+    paper=A4,               % paper size --> A4 is default in Germany
+    twoside=true,           % onesite or twoside printing
+    openright,              % doublepage cleaning ends up right side
+    parskip=full,           % spacing value / method for paragraphs
+    chapterprefix=true,     % prefix for chapter marks
+    12pt,                   % font size
+    headings=normal,        % size of headings
+    bibliography=totoc,     % include bib in toc
+    listof=totoc,           % include listof entries in toc
+    titlepage=on,           % own page for each title page
+    captions=tableabove,    % display table captions above the float env
+    draft=false,            % value for draft version
+]{scrreprt}%
+
+
+% **************************************************
+% Setup YOUR thesis document in this file !
+% **************************************************
+\input{my-thesis-setup}
+
+\newcommand{\sergio}[1]{{\color{magenta}\textit{\textsc{\textbf{}} #1}}}
+\newcommand{\angela}[1]{{\color{green}\textit{\textsc{\textbf{}} #1}}}
+\newcommand{\jeremy}[1]{{\color{red}\textit{\textsc{\textbf{}} #1}}}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
+\begin{document}
+
+% --------------------------
+% rename document parts
+% --------------------------
+%\renewcaptionname{ngerman}{\figurename}{Abb.}
+%\renewcaptionname{ngerman}{\tablename}{Tab.}
+%\renewcaptionname{english}{\figurename}{Fig.}
+%\renewcaptionname{english}{\tablename}{Tab.}
+\renewcaptionname{spanish}{\figurename}{Fig.}
+\renewcaptionname{spanish}{\tablename}{Tab.}
+
+%Cambiar Cuadros por Tablas y lista de tablas
+\renewcommand{\listtablename}{Índice de tablas} 
+
+% --------------------------
+% Front matter
+% --------------------------
+\includepdf[pages=-, fitpaper]{misc/PORTADA_Trabajo_Fin_de_Master.pdf}
+
+\cleardoublepage
+
+\pagenumbering{Roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{contenido/0 portada}		% INCLUDE: all titlepages
+\cleardoublepage
+
+%\pagestyle{plain}	
+%\input{contenido/1 declaracion}
+%\cleardoublepage
+
+% \pagestyle{plain}
+% \input{contenido/agradecimientos}
+% \cleardoublepage
+
+\pagestyle{plain}				% display just page numbers
+\input{contenido/2 abstract}		% INCLUDE: the abstracts (english and german)
+\cleardoublepage
+
+\setcounter{tocdepth}{2}		% define depth of toc
+\tableofcontents				% display table of contents
+\cleardoublepage
+
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}			% arabic page numbering
+\setcounter{page}{1}			% set page counter
+\pagestyle{maincontentstyle} 	% fancy header and footer
+
+\input{contenido/3 introduccion}  % INCLUDE: introducción
+\input{contenido/4 estado del arte}  % INCLUDE: estado del arte
+\input{contenido/5 desarrollo teorico}  % INCLUDE: desarrollo teórico
+\input{contenido/6 problema}  % INCLUDE: problema
+\input{contenido/7 implementacion}  % INCLUDE: implementación
+\input{contenido/8 resultados}  % INCLUDE: resultados
+\input{contenido/9 conclusion}  % INCLUDE: conclusion
+\input{contenido/repercusion} % INCLUDE: repercusion
+\input{contenido/10 planificación temporal y presupuesto}  % INCLUDE: planificacion
+\input{contenido/11 abreviaturas}  % INCLUDE: abreviaturas
+% \input{contenido/12 glosario}  % INCLUDE: glosario
+
+% --------------------------
+% Back matter
+
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+%\appendix\cleardoublepage
+%\input{content/chapter-appendix}       % INCLUDE: appendix
+%
+{%
+\setstretch{1.1}
+\renewcommand{\bibfont}{\normalfont\small}
+\setlength{\biblabelsep}{0pt}
+\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+\printbibliography[]
+%\printbibliography[nottype=online]
+%\printbibliography[heading=subbibliography,title={Páginas web},type=online,prefixnumbers={@}]
+}
+\cleardoublepage
+
+%\input{content/colophon}
+%\cleardoublepage
+
+%\input{content/declaration}
+%\clearpage
+%\newpage
+%\mbox{}
+
+% **************************************************
+% End of Document CONTENT
+% **************************************************
+\end{document}
