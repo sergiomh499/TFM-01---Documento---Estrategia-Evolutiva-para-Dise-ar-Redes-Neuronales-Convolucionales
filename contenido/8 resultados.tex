@@ -586,7 +586,7 @@ Los resultados obtenidos por la red pre-entrenada se reflejan en la Tabla \ref{t
 
 Una vez terminados los experimentos que mejoran la comprensión del algoritmo creado y los individuos que estaban siendo generados, es el momento de obtener arquitecturas que sean capaces de resolver de forma eficiente el problema dado, para posteriormente conocer si pueden ser alternativas reales a las arquitecturas popularmente extendidas.
 
-Para ello, se propone el lanzamiento del algoritmo durante el suficientemente tiempo para encontrar arquitecturas que su rendimiento sea adecuado. La configuración empleada es la ya comentada y justificada a lo largo de este capítulo y el de implementación, y se muestran en la Tabla \ref{tab:exp9_par_ag}, donde aparecen los parámetros del Algoritmo Genético, y en la Tabla \ref{tab:exp9_par_cnn}, donde aparecen los parámetros de entrenamiento de las CNNs.
+Para ello, se propone el lanzamiento del algoritmo durante el suficiente tiempo para encontrar arquitecturas que su rendimiento sea adecuado. La configuración empleada es la ya comentada y justificada a lo largo de este capítulo y el de implementación, y se muestran en la Tabla \ref{tab:exp9_par_ag}, donde aparecen los parámetros del Algoritmo Genético, y en la Tabla \ref{tab:exp9_par_cnn}, donde aparecen los parámetros de entrenamiento de las CNNs.\\
 
 \begin{table}[!h]
 \caption{Parámetros del Algoritmo Genético para el Experimento 9}
@@ -625,7 +625,7 @@ Para ello, se propone el lanzamiento del algoritmo durante el suficientemente ti
 
 La duración de la ejecución esta enteramente limitada por los enormes tiempos que este requiere, los cuáles han estado corriendo un tiempo total \textbf{432 horas} por cada una de las ejecuciones, lo que equivalen a 18 días. 
 
-Su evolución durante este tiempo es el mostrado en las Figuras \ref{fig:exp9_evolucion}, donde se puede ver como prácticamente en ningún caso se ha llegado a una diversidad de población baja. Esto hace sospechar que de haber tenido más tiempo de ejecución, se hubiera explorado en mayor profundidad el espacio de búsqueda, encontrando seguramente, mejores resultados que los obtenidos en este trabajo.
+Su evolución durante este tiempo es el mostrado en las Figuras \ref{fig:exp9_evolucion}, donde se puede ver como prácticamente en ningún caso se ha llegado a una diversidad de población baja. Esto hace sospechar que de haber tenido más tiempo de ejecución, se hubiera explorado en mayor profundidad el espacio de búsqueda, encontrando seguramente mejores resultados que los obtenidos en este trabajo.
 
 \begin{figure}[p]
 \centering
@@ -685,15 +685,9 @@ Su evolución durante este tiempo es el mostrado en las Figuras \ref{fig:exp9_ev
 \label{fig:exp9_evolucion}
 \end{figure}
 
-Tomando a los mejores individuos de la última población resultante, se obtienen los que aparecen en la Tabla \ref{tab:exp9_best_ind}. Estos como se puede ver, tienen formas y tamaños bastante diferenciados, pero se han detectado ciertas semejanzas entre ellos.
+Tomando a los mejores individuos de la última población resultante, se obtienen los que aparecen en la Tabla \ref{tab:exp9_best_ind}. Estos, como se puede ver, tienen formas y tamaños bastante diferenciados, sin embargo se han detectado ciertas semejanzas entre ellos.
 
-Una de las cosas que comparten todas las capas es la proporción entre tipos de capas, donde por encima siempre se sitúa el número de capas convolucionales residuales, seguido normalmente de las capas convolucionales y por último siendo el número de capas de \textit{pooling}.
-
-Otra de las semejanzas claras que se ha podido observar es la proporción entre capas convolucionales con \textit{stride} 1 y 2, donde claramente se impone un número alto de capas con este valor a 1.
-
-También destacar como a pesar de ser el máximo de capas que se pueden emplear de 20, el número de estas que finalmente se acaba empleando se sitúa entre 8 y 12, lo cual supone prácticamente la mitad del máximo.
-
-\begin{table}[]
+\begin{table}[h]
 \caption{Mejores arquitecturas obtenidas del Experimento 9}
 \label{tab:exp9_best_ind}
 \centering
@@ -714,11 +708,17 @@ También destacar como a pesar de ser el máximo de capas que se pueden emplear 
 }
 \end{table}
 
+Una de las características que comparten todas las capas es la proporción entre tipos de capas, donde por encima siempre se sitúa el número de capas convolucionales residuales, seguido normalmente de las capas convolucionales y, por último, siendo el número de capas de \textit{pooling}.
+
+Otra de las semejanzas claras que se ha podido observar es la proporción entre capas convolucionales con \textit{stride} 1 y 2, donde claramente se impone un número alto de capas con este valor a 1.
+
+También destacar como, a pesar de ser el máximo de capas que se pueden emplear de 20, el número de estas que finalmente se acaba empleando se sitúa entre 8 y 12, lo cual supone prácticamente la mitad del máximo.
+
+\newpage
+
 El desempeño final de estos individuos, se muestra en la Tabla \ref{tab:exp9_resultados}. Se puede observar gran parte de los individuos han conseguido un poder de clasificación con un \textit{accuracy} cercano al 0,90, para imágenes de entrada realmente pequeñas. Esto muestra la gran capacidad de clasificación de las arquitecturas encontradas.
 
-Además, se puede observar como los individuos 3 y 4, son realmente interesantes, ya que a pesar de no tener la mayor capacidad de clasificación de forma correcta, obtienen muy buenos resultados con tiempos de entrenamiento realmente bajos y tamaños bastante compactos, en comparación a otros individuos encontrados o empleados para este tipo de aplicaciones. Esto, muestra como la hipótesis de partida puede no estar muy alejada de la realidad, ya que realmente existen individuos con gran capacidad de clasificación con tamaños verdaderamente reducidos.
-
-\begin{table}[]
+\begin{table}[h]
 \caption{Resultados de las ejecuciones del Experimento 9}
 \label{tab:exp9_resultados}
 \centering
@@ -737,15 +737,19 @@ Además, se puede observar como los individuos 3 y 4, son realmente interesantes
 \end{tabular}
 \end{table}
 
-Por tanto, con los resultados obtenidos en este experimento, se observa como la hipótesis de partida puede tomarse, por ahora, como válida, ya que se han conseguido arquitecturas realmente interesantes, que se adaptan de forma adecuada al problema de clasificación dado siendo de menor tamaño y con tiempos de entrenamientos mucho más bajos que los obtenidos con arquitecturas más genéricas, consiguiendo incluso resultados de \textit{accuracy} equiparables.
+Además, se puede observar como los individuos 3 y 4, son realmente interesantes ya que, a pesar de no tener la mayor capacidad de clasificación de forma correcta, obtienen muy buenos resultados con tiempos de entrenamiento realmente bajos y tamaños bastante compactos en comparación a otros individuos encontrados o empleados para este tipo de aplicaciones. Esto muestra como la hipótesis de partida puede no estar muy alejada de la realidad, ya que realmente existen individuos con gran capacidad de clasificación con tamaños verdaderamente reducidos.
+
+Por tanto, con los resultados obtenidos en este experimento, se observa como la hipótesis de partida puede tomarse, por ahora, como válida, ya que se han conseguido arquitecturas realmente interesantes, que se adaptan de forma adecuada al problema de clasificación dado que son de menor tamaño y con tiempos de entrenamientos considerablemente más bajos que los obtenidos con arquitecturas más genéricas, consiguiendo incluso resultados de \textit{accuracy} equiparables.
 
 \subsection{Experimento 10. Entrenamiento de los mejores individuos}
 
-Finalmente, habiendo obtenido unos individuos con una capacidad de clasificación alto para imágenes de reducido tamaño, se deberá pasar a realizar un entrenamiento más profundo con imágenes con una resolución bastante mayor.
+Finalmente, habiendo obtenido unos individuos con una capacidad de clasificación alta para imágenes de reducido tamaño, se deberá pasar a realizar un entrenamiento más profundo con imágenes con una resolución bastante mayor.
 
 Para ello, se tomarán los individuos generados durante el Experimento 10, que aparecen reflejados en la Tabla \ref{tab:exp9_best_ind}. Estos se entrenarán con tamaños de imágenes de entrada de 112x112 y 224x224, con mayor cantidad de \textit{epochs} totales y mayores valores de \textit{patience}, tratando de entrenar de forma adecuada cada una de estas redes.
 
 Se espera que los resultados obtenidos sean sustancialmente mejores, como ya se comprobó con el Experimento 6, debido a la mayor cantidad de información que tienen estas imágenes ahora. Por otro lado, se espera que el tiempo de entrenamiento crezca también de forma sustancial
+
+Los valores obtenidos del entrenamiento de estas redes se puede observar en la Tabla \ref{tab:exp10_resultado}, donde se muestra el tiempo por \textit{epoch} que ha necesitado cada individuo y su \textit{accuracy}.
 
 \begin{table}[h]
 \caption{Resultados de las ejecuciones del Experimento 10}
@@ -769,8 +773,6 @@ Se espera que los resultados obtenidos sean sustancialmente mejores, como ya se 
 \end{tabular}
 \end{table}
 
-Los valores obtenidos del entrenamiento de estas redes se puede observar en la Tabla \ref{tab:exp10_resultado}, donde se muestra el tiempo por \textit{epoch} que ha necesitado cada individuo y su \textit{accuracy}.
-
-Se puede observar como los tiempos de entrenamiento aumentan drásticamente, donde algunos son mucho más largos de lo que sería deseado. Esto haría descartar el uso de imágenes de tamaños tan grandes para este tipo de arquitecturas, donde el tiempo de entrenamiento se dispara en gran medida. Aún así, es cierto también que ciertas redes se mantienen en tiempos ligeramente inferiores que los obtenidos con otras arquitecturas de referencia, lo cuál es un buen indicativo. 
+Se puede observar como los tiempos de entrenamiento aumentan drásticamente siendo, algunos, mucho más largos de lo que sería deseable. Esto haría descartar el uso de imágenes de tamaños tan grandes para este tipo de arquitecturas, donde el tiempo de entrenamiento se dispara notablemente. Aún así, es cierto también que ciertas redes se mantienen en tiempos ligeramente inferiores que los obtenidos con otras arquitecturas de referencia, lo cuál es un buen indicativo. 
 
 Con respecto al \textit{accuracy}, se obtiene un salto bastante significativo en comparación a las imágenes de entradas de 64x64, consiguiendo unos valores bastante altos, superando ampliamente en la mayoría de casos el 0,91. Esto demuestra como estas redes se adaptan de manera significativamente mejor al problema dado, obteniéndose una capacidad de clasificación muy alta.

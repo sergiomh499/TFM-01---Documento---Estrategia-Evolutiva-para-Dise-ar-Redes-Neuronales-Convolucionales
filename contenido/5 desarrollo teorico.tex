@@ -30,7 +30,7 @@ Todos los algoritmos evolutivos tienen la similitud de que comparten un mismo es
     \label{fig:diagrama_alg_evolutivo}
 \end{figure}
 
-En la figura \ref{fig:diagrama_alg_evolutivo}, se describe el funcionamiento de un algoritmo evolutivo genérico. En él, se pueden ver las diferentes etapas por las que debe ir transitando cada uno de estos algoritmos.
+En la Figura \ref{fig:diagrama_alg_evolutivo}, se describe el funcionamiento de un algoritmo evolutivo genérico. En él, se pueden ver las diferentes etapas por las que debe ir transitando cada uno de estos algoritmos.
 
 En primer lugar, en la etapa de \textbf{inicialización} se crea una población del tamaño deseado, la cual esta compuesta por individuos que codifican diferentes soluciones muestreadas aleatoriamente dentro del espacio de búsqueda del problema. 
 
@@ -53,11 +53,11 @@ Esto alterará de forma inmediata la forma en la que los diferentes genotipos re
 
 Existen tres aproximaciones principales para estos mecanismos: los algoritmos genéticos, las estrategias evolutivas y la programación genética.
 
-Los \textbf{Algoritmos Genéticos} \cite{Holland1984} emplean una codificación binaria, por lo que cada gen del genotipo esta formado por un valor ``0'' o ``1'' según corresponda. En la figura \ref{fig:ej_AG} podemos ver un ejemplo de esta representación.
+Los \textbf{Algoritmos Genéticos} \cite{Holland1984} emplean una codificación binaria, por lo que cada gen del genotipo esta formado por un valor ``0'' o ``1'' según corresponda. En la Figura \ref{fig:ej_AG} podemos ver un ejemplo de esta representación.
 
-Por otro lado, las \textbf{Estrategias Evolutivas} \cite{Beyer2002} se diferencian de las anteriores que la codificación se basa en el uso de número naturales que pueden ser representados de forma continua o discreta, según el problema. En la figura \ref{fig:ej_EE} podemos ver un ejemplo de esta representación.
+Por otro lado, las \textbf{Estrategias Evolutivas} \cite{Beyer2002} se diferencian de las anteriores que la codificación se basa en el uso de número naturales que pueden ser representados de forma continua o discreta, según el problema. En la Figura \ref{fig:ej_EE} podemos ver un ejemplo de esta representación.
 
-Por último, en la \textbf{Programación Genética} \cite{koza1992genetic} la representación de los individuos es bastante diferente a los anteriores, y es que se emplean estructuras de arboles. En ella cada nodo del árbol expresa una función como operador y cada terminal del nodo, por el contrario, contiene un operando, por lo que se pueden generar expresiones de manera bastante sencilla. En la figura \ref{fig:ej_PG} podemos ver un ejemplo de esta representación.
+Por último, en la \textbf{Programación Genética} \cite{koza1992genetic} la representación de los individuos es bastante diferente a los anteriores, y es que se emplean estructuras de arboles. En ella cada nodo del árbol expresa una función como operador y cada terminal del nodo, por el contrario, contiene un operando, por lo que se pueden generar expresiones de manera bastante sencilla. En la Figura \ref{fig:ej_PG} podemos ver un ejemplo de esta representación.
 
 \begin{figure}[h!]
 \centering
@@ -103,7 +103,7 @@ El funcionamiento general de los Algoritmos Genéticos, se basan en lo ya visto 
     \label{fig:diagrama_alg_genetico}
 \end{figure}
 
-En la figura \ref{fig:diagrama_alg_genetico}, se puede observar como se muestran los tres operadores genéticos que serán necesarios para la generación de nuevos individuos que serán candidatos a reemplazar generacionalmente a la anterior población.
+En la Figura \ref{fig:diagrama_alg_genetico}, se puede observar como se muestran los tres operadores genéticos que serán necesarios para la generación de nuevos individuos que serán candidatos a reemplazar generacionalmente a la anterior población.
 
 Estos tres operadores son la \textbf{selección}, donde se deben seleccionar a los padres para la reproducción, el \textbf{cruce} donde con cierta probabilidad los padres generaran a los hijos y finalmente la \textbf{mutación}, donde nuevamente con cierta probabilidad aplicará una alteración en el genotipo en los hijos.
 
@@ -252,7 +252,7 @@ El aprendizaje automático se divide en dos tipos: el Aprendizaje Supervisado y 
 
 \subsection{Estructura y funcionamiento}
 
-Para realizar la explicación del funcionamiento de las redes neuronales artificiales, se comenzará describiendo la red neuronal más simple existente. Esta está formada por una neurona y una única entrada \cite{10.5555/523781}. En la figura \ref{fig:neurona_simple}, se puede ver el esquema de esta red representada.
+Para realizar la explicación del funcionamiento de las redes neuronales artificiales, se comenzará describiendo la red neuronal más simple existente. Esta está formada por una neurona y una única entrada \cite{10.5555/523781}. En la Figura \ref{fig:neurona_simple}, se puede ver el esquema de esta red representada.
 
 \begin{figure}[h]
     \centering
@@ -278,7 +278,7 @@ De este pequeño ejemplo, se puede deducir una expresión genérica para una neu
     \label{eq:neurona_simple_n}
 \end{equation}
 
-Una vez conocido el principio básico de funcionamiento de una neurona, la explicación de una red neuronal se basa en la interconexión de forma lógica de gran cantidad de estas neuronas. En función del problema que se intente resolver, la interconexión se realizará de diferentes maneras, formando numerosas topologías de neuronas en función de las necesidades de la red. Aún así, las redes neuronales suelen seguir un esquema bastante claro como el que se puede ver en la figura \ref{fig:red_neuronal}.
+Una vez conocido el principio básico de funcionamiento de una neurona, la explicación de una red neuronal se basa en la interconexión de forma lógica de gran cantidad de estas neuronas. En función del problema que se intente resolver, la interconexión se realizará de diferentes maneras, formando numerosas topologías de neuronas en función de las necesidades de la red. Aún así, las redes neuronales suelen seguir un esquema bastante claro como el que se puede ver en la Figura \ref{fig:red_neuronal}.
 
 \begin{figure}[h]
     \centering
@@ -300,7 +300,7 @@ Como se puede ver, las neuronas se agrupan normalmente en capas de cierta profun
 La función de transferencia comentada en el apartado anterior, se le denomina \textbf{Función de Activación}. Esta, como ya se comentó, su elección cae en función del criterio del diseñador de la red y del problema a resolver. Ahora se va a pasar a mostrar las funciones más empleadas en la actualidad.
 
 \begin{itemize}
-    \item \textbf{ReLU:} Esta función de activación sigue la expresión $a(x) = max(0,x)$. Como se puede observar se trata de una función bastante simple, ya que no requiere de ningún gran calculo, por lo que su uso está bastante extendido debido a su bajo coste computacional. Como desventaja, podemos ver que se trata de una expresión no derivable. En la figura \ref{fig:relu} se puede ver como es esta función.
+    \item \textbf{ReLU:} Esta función de activación sigue la expresión $a(x) = max(0,x)$. Como se puede observar se trata de una función bastante simple, ya que no requiere de ningún gran calculo, por lo que su uso está bastante extendido debido a su bajo coste computacional. Como desventaja, podemos ver que se trata de una expresión no derivable. En la Figura \ref{fig:relu} se puede ver como es esta función.
     
     \begin{figure}[!ht]
     \centering
@@ -310,7 +310,7 @@ La función de transferencia comentada en el apartado anterior, se le denomina \
     \end{figure}
 
     
-    \item \textbf{Softplus:} Esta función de activación sigue la expresión $a(x) = log(1 + e^x)$. Como se puede observar, es una expresión bastante más compleja de resolver con respecto a la \textit{ReLU}, lo cuál se traduce en mayor coste computacional. Cómo ventaja frente a la anterior, es su derivabilidad, lo cuál lo hace adecuado para algoritmos de entrenamiento de la red que se verán posteriormente. En la figura \ref{fig:softplus} se puede ver como es esta función.
+    \item \textbf{Softplus:} Esta función de activación sigue la expresión $a(x) = log(1 + e^x)$. Como se puede observar, es una expresión bastante más compleja de resolver con respecto a la \textit{ReLU}, lo cuál se traduce en mayor coste computacional. Cómo ventaja frente a la anterior, es su derivabilidad, lo cuál lo hace adecuado para algoritmos de entrenamiento de la red que se verán posteriormente. En la Figura \ref{fig:softplus} se puede ver como es esta función.
     
     \begin{figure}[!ht]
     \centering
@@ -319,7 +319,7 @@ La función de transferencia comentada en el apartado anterior, se le denomina \
     \label{fig:softplus}
     \end{figure}
     
-    \item \textbf{Tangente hiperbólica (tanh):} Esta función de activación sigue la expresión $a(x) = tanh(x)$. Es también ampliamente usada, como la anterior, debido a su derivabilidad en todo su rango. En la figura \ref{fig:tanh} se puede ver como es esta función.
+    \item \textbf{Tangente hiperbólica (tanh):} Esta función de activación sigue la expresión $a(x) = tanh(x)$. Es también ampliamente usada, como la anterior, debido a su derivabilidad en todo su rango. En la Figura \ref{fig:tanh} se puede ver como es esta función.
     
     \begin{figure}[!ht]
     \centering
@@ -328,7 +328,7 @@ La función de transferencia comentada en el apartado anterior, se le denomina \
     \label{fig:tanh}
     \end{figure}
     
-    \item \textbf{Sigmoide:} Esta función de activación sigue la expresión $a(x) = \frac{1}{1 + e^{-x}}$ y tiene una forma similar a la dada por la tangente hiperbólica. Comparte también que es derivable en todo su rango. En la figura \ref{fig:sigmoid} se puede ver como es esta función.
+    \item \textbf{Sigmoide:} Esta función de activación sigue la expresión $a(x) = \frac{1}{1 + e^{-x}}$ y tiene una forma similar a la dada por la tangente hiperbólica. Comparte también que es derivable en todo su rango. En la Figura \ref{fig:sigmoid} se puede ver como es esta función.
     
     \begin{figure}[!ht]
     \centering
@@ -372,7 +372,7 @@ Durante el aprendizaje, es necesario conseguir un numero de iteraciones adecuado
 
 Un entrenamiento excesivo de nuestra red puede hacer que se llegue a un caso de sobre-entrenamiento o \textit{overfitting} \cite{salman2019overfitting}. Esto quiere decir que nuestra red, tan solo es capaz de resolver de forma adecuada los valores entregados en el conjunto de datos de entrenamiento, sin embargo, no es capaz de hacerlo de forma correcta con los datos de validación.
 
-Es por ello que tras cada cierto numero de iteraciones, sea adecuado observar como resuelve la red el problema con los datos de validación, para poder establecer un punto de parada de entrenamiento de la red. Esto se ve de forma muy descriptiva en la figura \ref{fig:overfitting}.
+Es por ello que tras cada cierto numero de iteraciones, sea adecuado observar como resuelve la red el problema con los datos de validación, para poder establecer un punto de parada de entrenamiento de la red. Esto se ve de forma muy descriptiva en la Figura \ref{fig:overfitting}.
 
 \begin{figure}[!h]
     \centering
@@ -400,7 +400,7 @@ El diseño de estas redes se sigue asemejando al comportamiento de las neuronas 
 
 Dentro de la arquitectura habitual de una CNN, existen diferentes tipos de capas esenciales que componen esta \cite{Aggarwal2018}. Cada una de ellas, se encarga de realizar unas operaciones determinadas dentro de la misma. Es por ello que para el correcto funcionamiento, es necesario conocer que actividades realiza dentro de la propia red.
 
-En primer lugar, se debe hablar de las \textbf{Capas de Convolución}. Estas básicamente se basan en la aplicación de diferentes filtros o \textit{kernels}, que son modelados de la misma manera que son modelados los pesos dentro de una red neuronal convencional, de manera que son capaces de extraer características importantes de una imagen de entrada dada. A la salida de esta capa, encontramos los mapas de características o \textit{features maps}, los cuales son el resultado de aplicar la operación de convolución entre la imagen de entrada y el \textit{kernel}. En la figura \ref{fig:convolucion}, se puede ver un ejemplo de lo anteriormente comentado.\\
+En primer lugar, se debe hablar de las \textbf{Capas de Convolución}. Estas básicamente se basan en la aplicación de diferentes filtros o \textit{kernels}, que son modelados de la misma manera que son modelados los pesos dentro de una red neuronal convencional, de manera que son capaces de extraer características importantes de una imagen de entrada dada. A la salida de esta capa, encontramos los mapas de características o \textit{features maps}, los cuales son el resultado de aplicar la operación de convolución entre la imagen de entrada y el \textit{kernel}. En la Figura \ref{fig:convolucion}, se puede ver un ejemplo de lo anteriormente comentado.\\
 
 \begin{figure}[!h]
 \centering
@@ -425,7 +425,7 @@ En segundo lugar, las capas más empleadas son las \textbf{Capas de \textit{Subs
 
 Este tipo de capas no son completamente necesarias de usar, por el contrario de las capas de convolución, ya que se pueden conseguir resultados similares al aplicar \textit{stride} de valores superiores o iguales a dos en las capas de convolución. Es por ello que en algunas arquitecturas, puede ser normal no encontrarse con este tipo de capas.
 
-Los parámetros de diseño de estas capas son el \textit{stride} que debe ser un valor superior o igual a 2, para ser capaz de reducir la dimensionalidad de las imágenes de entrada, y la función de aplicación, que no es más que filtros fijos de cierto tamaño que realizan una operación determinada al aplicar el operador de convolución. Algunas de estas son el \textit{Average Pooling}, donde se extrae el valor medio o el \textit{Max Pooling}, donde se extrae el valor más alto. En la figura \ref{fig:pooling}, podemos ver un ejemplo de aplicación de esta capa.\\
+Los parámetros de diseño de estas capas son el \textit{stride} que debe ser un valor superior o igual a 2, para ser capaz de reducir la dimensionalidad de las imágenes de entrada, y la función de aplicación, que no es más que filtros fijos de cierto tamaño que realizan una operación determinada al aplicar el operador de convolución. Algunas de estas son el \textit{Average Pooling}, donde se extrae el valor medio o el \textit{Max Pooling}, donde se extrae el valor más alto. En la Figura \ref{fig:pooling}, podemos ver un ejemplo de aplicación de esta capa.\\
 
 \begin{figure}[!h]
 \centering
@@ -446,7 +446,7 @@ Algunas de las redes más importantes en los últimos años presentadas en este 
 \begin{itemize}
     \item \textbf{AlexNet: \cite{NIPS2012_c399862d}} Nacida en el año 2012 fue la primera vez que ganó el reto una arquitectura basad en CNN. Este año la tasa de error cometida bajó de manera considerable en comparación a años anteriores, pasando del 25\% al 17\% de error. 
     
-    AlexNet era una red más compleja que las empleadas hasta el momento, y estaba compuesta por 5 capas convolucionales, 3 capas de \textit{pooling}y 3 capas \textit{fully connected} al final. Esta tenía 60 millones de parámetros y en este año se tardó en entrenar 6 días. En la figura \ref{fig:alexnet}, se puede ver una representación de como es la arquitectura de esta red.\\
+    AlexNet era una red más compleja que las empleadas hasta el momento, y estaba compuesta por 5 capas convolucionales, 3 capas de \textit{pooling}y 3 capas \textit{fully connected} al final. Esta tenía 60 millones de parámetros y en este año se tardó en entrenar 6 días. En la Figura \ref{fig:alexnet}, se puede ver una representación de como es la arquitectura de esta red.\\
     
     \begin{figure}[!h]
         \centering
@@ -461,7 +461,7 @@ Algunas de las redes más importantes en los últimos años presentadas en este 
     
     \item \textbf{VGGNet \cite{simonyan2015deep}:} Es el finalista del reto en 2014 y desde entonces ha sido una arquitectura ampliamente influyente. Este demostró de manera bastante intuitiva como debe ser la profundidad de una arquitectura de una red, para que trabaje de manera adecuada, ya que esto es lo que le permite extraer detalles a diferentes niveles de la imagen. Esta consiguió una tasa de error del 7,2 \%.
     
-    Además, su arquitectura es bastante simple, formándose por 19 capas convolucionales con tamaños de filtro de 3x3 y \textit{stride} de 1, y capas de \textit{max pooling} con \textit{stride} de 2. En la figura \ref{fig:vggnet}, se puede ver como es la arquitectura de esta red.\\
+    Además, su arquitectura es bastante simple, formándose por 19 capas convolucionales con tamaños de filtro de 3x3 y \textit{stride} de 1, y capas de \textit{max pooling} con \textit{stride} de 2. En la Figura \ref{fig:vggnet}, se puede ver como es la arquitectura de esta red.\\
     
     \begin{figure}[!h]
         \centering
@@ -474,9 +474,9 @@ Algunas de las redes más importantes en los últimos años presentadas en este 
     
     \item \textbf{GoogLeNet (Inception V1): \cite{szegedy2014going}} Fue la ganadora del reto en el año 2014. Fue desarrollada por Google, pero sus autores hacen tributo a la arquitectura LeNet, en la cual se basaron en gran parte para el desarrollo de esta. Arrojó un error del 6,7 \%. Por debajo de la anteriormente comentada VGGNet.
     
-    La arquitectura de esta red es bastante compleja en comparación con las existentes hasta el momento, ya que fue un modelo bastante diferente al general que había sido presentado hasta entonces. En esta se disponen varios bloques, donde se realizan diversas operaciones en paralelo, en vez de en forma secuencial como se había estado haciendo hasta este momento. En la figura \ref{fig:googlenet}, se puede ver como es la arquitectura de esta red.
+    La arquitectura de esta red es bastante compleja en comparación con las existentes hasta el momento, ya que fue un modelo bastante diferente al general que había sido presentado hasta entonces. En esta se disponen varios bloques, donde se realizan diversas operaciones en paralelo, en vez de en forma secuencial como se había estado haciendo hasta este momento. En la Figura \ref{fig:googlenet}, se puede ver como es la arquitectura de esta red y en la Figura \ref{fig:bloques_inceptionv1} los bloques que la conforman.
     
-    En esta red, se introduce por primera vez el módulo de \textbf{Inception}, que es sacado de un trabajo anterior \cite{szegedy2014going}. Un módulo Inception tiene la forma presentada en la figura \ref{fig:inception_bloque}.
+    En esta red, se introduce por primera vez el módulo de \textbf{Inception}, que es sacado de un trabajo anterior \cite{szegedy2014going}. Un módulo Inception tiene la forma presentada en la Figura \ref{fig:inception_bloque}.
     
     \begin{figure}[!h]
         \centering
@@ -507,7 +507,7 @@ Algunas de las redes más importantes en los últimos años presentadas en este 
     Como se puede ver, ya no se aplica de forma secuencial la serie tradicional de capas convolucionales a la que se estaba acostumbrado, sino que el procesamiento se realiza de forma paralela, concatenando definitivamente estos procesos. Además se puede observar como realmente la aplicación de esto, no aumenta en gran medida el número de parámetros de la red y esto es debido a la aplicación de convoluciones de tamaño 1x1 que reducen de manera significativa el tamaño de la imagen de entrada. También introduce la eliminación de la capa \textit{fully connected}, sustituyéndolo por lo que llaman \textit{global average media}, que consiguiendo reducir el error en la precisión hasta en un 0,6\%.
     
     
-    \item \textbf{ResNet: \cite{He2016}} Fue la ganadora del reto en el año 2015 y fue desarrollada por Microsoft. Este trabajo fue el primero en presentar redes basados en bloques residuales. Consiguió en este año bajar la tasa de error hasta un 3,57 \%, lo que marcó un gran hito en este ámbito, ya que las personas en tareas similares suelen tener una tasa de error entre el 5\% y el 10\%, dependiendo de las habilidades y experiencias de cada persona. No solo eso sino que con este concepto, se llegó a generar una red con 152 capas que era menos compleja de entrenar que la anteriormente comentada VGGNet que tan solo contaba con 19 capas de profundidad. En la figura \ref{fig:resnet}, se puede ver como es la arquitectura de esta red.
+    \item \textbf{ResNet: \cite{He2016}} Fue la ganadora del reto en el año 2015 y fue desarrollada por Microsoft. Este trabajo fue el primero en presentar redes basados en bloques residuales. Consiguió en este año bajar la tasa de error hasta un 3,57 \%, lo que marcó un gran hito en este ámbito, ya que las personas en tareas similares suelen tener una tasa de error entre el 5\% y el 10\%, dependiendo de las habilidades y experiencias de cada persona. No solo eso sino que con este concepto, se llegó a generar una red con 152 capas que era menos compleja de entrenar que la anteriormente comentada VGGNet que tan solo contaba con 19 capas de profundidad. En la Figura \ref{fig:resnet}, se puede ver como es la arquitectura de esta red y en la Figura \ref{fig:bloques_resnet50} los bloques que la conforman.
     
     \begin{figure}[!h]
         \centering
@@ -538,7 +538,7 @@ Algunas de las redes más importantes en los últimos años presentadas en este 
     
     La idea básica en la que se centra ResNet, es el tratar de dejar de apilar capas, si se esta viendo que a partir de cierto puntoesto no hace mejorar la precisión en el entrenamiento. De hecho plantean la aparición de problemas como el \textit{vanishing gradient} o el \textit{curse of dimensionality} donde la red dejaría de aprender por estos motivos.
     
-    A partir de este punto nace la idea de los bloques residuales, que básicamente es una conexión que salta un cierto número de capas. En la figura \ref{fig:bloque_residual}, se puede observar como se realiza esta conexión.
+    A partir de este punto nace la idea de los bloques residuales, que básicamente es una conexión que salta un cierto número de capas. En la Figura \ref{fig:bloque_residual}, se puede observar como se realiza esta conexión.
     
     \begin{figure}[!h]
         \centering

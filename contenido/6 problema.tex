@@ -48,16 +48,18 @@ Para alcanzar el objetivo de este trabajo, se debe tener una base de datos sufic
 
 Este \textit{dataset}, cuenta con un total de 17509 imágenes clasificadas, donde se recogen un total de 8 especies diferentes de malas hierbas y un conjunto separado de plantas que no son malas hierbas, denominados negativos. Estas han sido recopiladas de diferentes lugares de Australia como se puede observar en la Figura \ref{fig:loc_malas_hierbas}. Estas especies seleccionadas están localizadas más específicamente en las siguientes zonas de pastoreo a lo largo del estado de Queesland: ``Black River'', ``Charters Towers'', ``Cluden'', ``Douglas'', ``Hervey Range'', ``Kelso'', ``McKinlay'' y ``Paluma''.
 
-\begin{figure}[ht]
+Este \textit{datset} incluye imágenes etiquetadas de las siguientes especies: ``Chinee apple'', ``Snake weed'', ``Lantana'', ``Prickly acacia'', `` Siam weed'', ``Parthenium'', ``Rubber vine'' y ``Parkinsonia''. Una recopilación de algunas de las imágenes de cada especie puede verse en la figura \ref{fig:dataset_ejemplo_grande}.
+
+Esta amplia recopilación de imágenes permitirá distinguir entre diferentes tipos de malas hierbas, además de diferenciarlas de aquellas que no lo son, de manera que se podrá comprobar el rendimiento de las arquitecturas obtenidas con el desarrollo del algoritmo planteado durante este trabajo.
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figuras/problema/localizacion_malas_hierbas.jpg}
-    \caption{Localización de las imágenes etiquetadas de malas hierbas del \textit{dataset} seleccionado (Fuente: Google, SIO, NOAA, U.S. Navy, NGA, GEBCO; Image © 2018 Landsat / Copernicus; Image © 2018 DigitalGlobe; Image © 2018 CNES / Airbus)}
+    \includegraphics[width=0.95\textwidth]{figuras/problema/localizacion_malas_hierbas.jpg}
+    \caption{Localización de las imágenes etiquetadas de malas hierbas del \textit{dataset} seleccionado \cite{Olsen2019}}
     \label{fig:loc_malas_hierbas}
 \end{figure}
 
-Este \textit{datset} incluye imágenes etiquetadas de las siguientes especies: ``Chinee apple'', ``Snake weed'', ``Lantana'', ``Prickly acacia'', `` Siam weed'', ``Parthenium'', ``Rubber vine'' y ``Parkinsonia''. Una recopilación de algunas de las imágenes de cada especie puede verse en la figura \ref{fig:dataset_ejemplo_grande}.
-
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
     \begin{subfigure}{0.24\textwidth}
         \includegraphics[width=\textwidth]{figuras/problema/chinee_apple.jpg}
@@ -102,4 +104,3 @@ Este \textit{datset} incluye imágenes etiquetadas de las siguientes especies: `
     \label{fig:dataset_ejemplo_grande}
 \end{figure}
 
-Esta amplia recopilación de imágenes permitirá distinguir entre diferentes tipos de malas hierbas, además de diferenciarlas de aquellas que no lo son, de manera que se podrá comprobar el rendimiento de las arquitecturas obtenidas con el desarrollo del algoritmo planteado durante este trabajo.
